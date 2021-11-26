@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trackhive.NET", "Trackhive.NET\Trackhive.NET.csproj", "{546F3102-6CC3-46B8-9AB0-D4A15A4CCCF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trackhive.NET.Demo", "Trackhive.NET.Demo\Trackhive.NET.Demo.csproj", "{91AFC6CF-4789-42C8-8741-430977571735}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{546F3102-6CC3-46B8-9AB0-D4A15A4CCCF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{546F3102-6CC3-46B8-9AB0-D4A15A4CCCF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{546F3102-6CC3-46B8-9AB0-D4A15A4CCCF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{546F3102-6CC3-46B8-9AB0-D4A15A4CCCF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91AFC6CF-4789-42C8-8741-430977571735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91AFC6CF-4789-42C8-8741-430977571735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91AFC6CF-4789-42C8-8741-430977571735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91AFC6CF-4789-42C8-8741-430977571735}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
