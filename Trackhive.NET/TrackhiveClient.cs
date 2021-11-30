@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -53,9 +52,16 @@ namespace Trackhive.NET
             return response;
         }
 
-        public async Task<object> GetTrackingDetailsAsync()
+        /// <summary>
+        /// This method is used to get specific tracking details.
+        /// </summary>
+        /// <param name="id">The id of the tracking for which the details should be retrieved.</param>
+        /// <returns></returns>
+        public async Task<TrackingDetailResponse> GetTrackingDetailsAsync(string id)
         {
-            throw new NotImplementedException();
+            var request = new RestRequest($"trackings/{id}", Method.GET);
+            var response = await _client.GetAsync<TrackingDetailResponse>(request);
+            return response;
         }
 
         /// <summary>
@@ -84,6 +90,18 @@ namespace Trackhive.NET
             var response = await _client.GetAsync<TrackingListResponse>(request);
 
             return response;
+        }
+
+        /// <summary>
+        /// This method is used to delete a specific tracking.
+        /// </summary>
+        /// <param name="id">The id of the tracking to remove.</param>
+        /// <returns>True if successful - False if unsuccessful</returns>
+        public async Task<bool> DeleteTrackingAsync(string id)
+        {
+            var request = new RestRequest($"trackings/{id}", Method.DELETE);
+            var response = await _client.DeleteAsync<BaseResponse<dynamic>>(request);
+            return response.Meta.Code == 200;
         }
 
     }
